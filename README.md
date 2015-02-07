@@ -1,3 +1,3 @@
 # MyFirstJScript
 My first JavaScript repository
-Udacity 0 JavaScript Basics Course
+// Udacity Basic JavaScript Basics Course
