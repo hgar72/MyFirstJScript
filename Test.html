@@ -1,11 +1,36 @@
 <html>
    <body>
-   
-      <script language="javascript" type="text/javascript">
-         <!--
-            document.write("Hello World!")
-         //-->
-      </script>
-      
+      <p id="demo"></p>
+
+      <script>
+		
+      	function displayStars(maxRow){
+      		
+            buildStars = "";
+            y=0;		//amount of stars in one row
+      		//maxRow = 7  //max amount of Row to display
+      		
+            while (y<maxRow){
+      			//* in one row
+      			for (x=0;x<y;x++){
+      				buildStars = buildStars + "*";
+                  //document.write("*");
+                  //console.log("*");
+                  //document.getElementById("demo").innerHTML = "*";
+      			}
+      			y++;
+               buildStars = buildStars + "\n";
+               //document.write("\n");
+               //console.log("/n");
+      			//document.getElementById("demo").innerHTML = "<br />";
+      		}
+
+            return buildStars;
+      	}
+		
+      alert(displayStars(10));
+	   document.getElementById("demo").innerHTML = displayStars(15);
+	  </script>     
+	  
    </body>
 </html>
