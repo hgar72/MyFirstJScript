@@ -4,32 +4,54 @@
 
       <script>
 		
-      	function displayStars(maxRow){
+      	function displayStarsWhile(maxRow){
       		
             buildStars = "";
-            y=0;		//amount of stars in one row
-      		//maxRow = 7  //max amount of Row to display
+            y=1;		//amount of stars in one row
       		
             while (y<maxRow){
       			//* in one row
       			for (x=0;x<y;x++){
       				buildStars = buildStars + "*";
-                  //document.write("*");
-                  //console.log("*");
-                  //document.getElementById("demo").innerHTML = "*";
       			}
       			y++;
                buildStars = buildStars + "\n";
-               //document.write("\n");
-               //console.log("/n");
-      			//document.getElementById("demo").innerHTML = "<br />";
       		}
-
             return buildStars;
       	}
 		
-      alert(displayStars(10));
-	   document.getElementById("demo").innerHTML = displayStars(15);
+         function displayStarsString(){
+            var strStars = "*******";
+            for (x=1;x<=(strStars.length);x++){
+               console.log(strStars.substr(0,x));
+            }
+         }
+
+         function zeroToHundred(){
+            //display the number from 1 to 100
+            //but if the number is div by 3 then display Fizz
+            //if div by 5 (but not by 3) then display Buzz
+            //if div by 3 and 5 then display FizzBuzz
+            for (x=1;x<=100;x++){
+               var strShowNumber = x;
+               if (x % 3 == 0) {strShowNumber = "Fizz";}
+               if (x % 5 == 0 ) {(x%3==0) ? (strShowNumber = strShowNumber + "Buzz"):(strShowNumber = "Buzz");}
+               console.log(strShowNumber);
+            }
+         }
+            
+
+
+      //Use of While and nested For Loop
+      console.log(displayStarsWhile(10));
+      
+      //Use of String length
+      displayStarsString();
+
+      //Zero to Hundred
+      zeroToHundred();
+
+	   
 	  </script>     
 	  
    </body>
